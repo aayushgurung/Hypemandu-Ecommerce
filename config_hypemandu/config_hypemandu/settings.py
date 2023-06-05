@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -136,3 +138,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID='cart'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# CELERY_BROKER_URL = 'amqp://localhost'  # Example broker URL, adjust as needed
+# CELERY_RESULT_BACKEND = 'django-db'  # Example result backend, adjust as needed
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TIMEZONE = 'UTC'

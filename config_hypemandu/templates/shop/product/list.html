@@ -1,7 +1,7 @@
-{% extends 'shop/base.html' %} {% load static %} 
-{% block title %} {% if category %}{{ category.name }}{% else %}Products{% endif %} {% endblock %} 
-{% block content %}
-<div id="sidebar">
+{% extends 'shop/base.html' %} {% load static %} {% block title %} {% if category %}
+{{ category.name }}{% else %}Products{% endif %} {% endblock %} {% block content %}
+
+{% comment %} <div id="sidebar">
   <h3>Categories</h3>
   <ul>
     <li {% if not category %}class="selected" {% endif %}>
@@ -27,5 +27,185 @@
   </div>
 
   {% endfor %}
+</div> {% endcomment %}
+<div
+  id="carouselExampleAutoplaying"
+  class="carousel slide carousel-fade carousel-container"
+  data-bs-ride="carousel"
+  data-bs-interval="2500"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'images/1.jpeg' %}"
+        class="d-block w-100 img-fluid"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/2.jpg' %}" class="d-block w-100" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/3.jpg' %}" class="d-block w-100" alt="..." />
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card border-0">
+              <img
+                class="img-custom-width"
+                src="{% static 'images/1.jpeg' %}"
+                alt=""
+              />
+              <div class="card-body bggray fw-bold">
+                <h5 class="card-title">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >House on Sale at Imadol</a
+                  >
+                </h5>
+                <p class="card-text text-warning mb-1">Rs. 11,00,000</p>
+                <div class="small">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >ASAP ROCKY</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="item">
+            <div class="card border-0">
+              <img
+                class="img-custom-width"
+                src="{% static 'images/2.jpg' %}"
+                alt=""
+              />
+              <div class="card-body bggray fw-bold">
+                <h5 class="card-title">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >Land on sale at Grande</a
+                  >
+                </h5>
+                <p class="card-text text-warning mb-1">Rs. 3,70,00,000</p>
+                <div class="small">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >Weeknd</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--item-->
+          <div class="item">
+            <div class="card border-0">
+              <img
+                class="img-custom-width"
+                src="{% static 'images/3.jpg' %}"
+                alt=""
+              />
+              <div class="card-body bggray fw-bold">
+                <h5 class="card-title">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >Parlour/Saloon on Sale</a
+                  >
+                </h5>
+                <p class="card-text text-warning mb-1">Rs. 20,00,000</p>
+                <div class="small">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >JackBoy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--item-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card border-0">
+              <img
+                class="img-custom-width"
+                src="{% static 'images/1.jpeg' %}"
+                alt=""
+              />
+              <div class="card-body bggray fw-bold">
+                <h5 class="card-title">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >House on Sale at Imadol</a
+                  >
+                </h5>
+                <p class="card-text text-warning mb-1">Rs. 11,00,000</p>
+                <div class="small">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >ASAP ROCKY</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="item">
+            <div class="card border-0">
+              <img
+                class="img-custom-width"
+                src="{% static 'images/2.jpg' %}"
+                alt=""
+              />
+              <div class="card-body bggray fw-bold">
+                <h5 class="card-title">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >Land on sale at Grande</a
+                  >
+                </h5>
+                <p class="card-text text-warning mb-1">Rs. 3,70,00,000</p>
+                <div class="small">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >Weeknd</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--item-->
+          <div class="item">
+            <div class="card border-0">
+              <img
+                class="img-custom-width"
+                src="{% static 'images/3.jpg' %}"
+                alt=""
+              />
+              <div class="card-body bggray fw-bold">
+                <h5 class="card-title">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >Parlour/Saloon on Sale</a
+                  >
+                </h5>
+                <p class="card-text text-warning mb-1">Rs. 20,00,000</p>
+                <div class="small">
+                  <a href="#" class="text-decoration-none text-custom-color"
+                    >JackBoy</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--item-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">Social Media</div>
+  <div class="row">Email</div>
 </div>
 {% endblock %}
