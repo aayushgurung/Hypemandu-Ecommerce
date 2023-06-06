@@ -2,6 +2,11 @@ from django.db import models
 from shop.models import Product
 # Create your models here.
 
+
+METHOD=[
+    ("Cash On Delivery","Cash On Delivery"),
+    ("Khalti","Khalti"),
+]
 class Order(models.Model):
     first_name=models.CharField(max_length=50)
     last_name=models.CharField(max_length=50)
@@ -12,6 +17,8 @@ class Order(models.Model):
     created=models.DateField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
     paid=models.BooleanField(default=False)
+    payment_method=models.CharField(max_length=20,choices=METHOD,default="Cash On Delivery",null=True)
+    payment_completed=models.BooleanField(default=False,null=True,blank=True)
     
     class Meta:
         ordering=['-created']
